@@ -1,914 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
 
-    <title>TReact</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+  <title>MovieVault | Discover Movies</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="nav-container">
 
-    <header class="navbar container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🎬</span>
+        MOVIE<span>VAULT</span>
+      </a>
 
-        <a href="#" class="logo">
+      <div class="nav-links">
+        <a href="#movies">Movies</a>
+        <a href="#about">About</a>
+      </div>
 
-            <img
-                src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg"
-                alt="TReact Logo"
-            >
+    </div>
+  </nav>
 
-            <span>Treact</span>
 
-        </a>
+  <!-- HERO -->
+  <header class="hero">
 
-        <nav class="nav-links">
+    <div class="hero-overlay"></div>
 
-            <a href="#about">About</a>
+    <div class="hero-content">
 
-            <a href="#blog">Blog</a>
+      <p class="hero-label">
+        DISCOVER YOUR NEXT FAVORITE MOVIE
+      </p>
 
-            <a href="#pricing">Pricing</a>
+      <h1>
+        Find movies worth
+        <span>watching.</span>
+      </h1>
 
-            <a href="#contact">Contact Us</a>
+      <p class="hero-description">
+        Search thousands of movies, discover classics
+        and find your next movie night favorite.
+      </p>
 
-            <a href="#login">Login</a>
 
-            <a href="#" class="signup-btn">
-                Sign Up
-            </a>
+      <!-- SEARCH -->
+      <form id="searchForm" class="search-box">
 
-        </nav>
+        <input
+          id="searchInput"
+          type="text"
+          placeholder="Search for a movie..."
+          autocomplete="off"
+          aria-label="Search movies"
+        />
 
-    </header>
+        <button type="submit">
+          🔍 Search
+        </button>
 
+      </form>
 
-    <main>
+      <div class="popular-searches">
+        <span>Try:</span>
 
+        <button type="button" data-movie="Gladiator">
+          Gladiator
+        </button>
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <button type="button" data-movie="The Dark Knight">
+          The Dark Knight
+        </button>
 
-        <section class="hero container">
+        <button type="button" data-movie="Interstellar">
+          Interstellar
+        </button>
 
-            <div class="hero-content">
+        <button type="button" data-movie="The Godfather">
+          The Godfather
+        </button>
+      </div>
 
-                <h1>
-                    Beautiful React
-                    Templates
-                    <span>for you.</span>
-                </h1>
+    </div>
 
-                <p>
-                    Our templates are easy to setup, understand and customize.
-                    Fully modular components with a variety of pages and components.
-                </p>
+  </header>
 
-                <form class="email-form">
 
-                    <input
-                        type="email"
-                        placeholder="Your E-mail Address"
-                    >
+  <!-- MAIN -->
+  <main>
 
-                    <button type="submit">
-                        Get Started
-                    </button>
+    <section id="movies" class="movies-section">
 
-                </form>
+      <div class="section-header">
 
-                <div class="trusted">
+        <div>
+          <p class="section-label">MOVIE COLLECTION</p>
 
-                    <small>
-                        OUR TRUSTED CUSTOMERS
-                    </small>
-
-                    <img
-                        src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png"
-                        alt="Trusted Customers"
-                    >
-
-                </div>
-
-            </div>
-
-
-            <div class="hero-image">
-
-                <img
-                    src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg"
-                    alt="TReact Illustration"
-                >
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             FEATURES
-        ========================== -->
-
-        <section id="about" class="features-section section container">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    FEATURES
-                </span>
-
-                <h2>
-                    We have Amazing
-                    <span>Service.</span>
-                </h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
-
-            </div>
-
-
-            <div class="features-grid">
-
-
-                <!-- SECURE -->
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-
-                        <img
-                            src="./assets/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
-                            alt="Secure"
-                        >
-
-                    </div>
-
-                    <div>
-
-                        <h3>Secure</h3>
-
-                        <p>
-                            We strictly only deal with vendors
-                            that provide top notch security.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- SUPPORT -->
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-
-                        <img
-                            src="./assets/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
-                            alt="24/7 Support"
-                        >
-
-                    </div>
-
-                    <div>
-
-                        <h3>24/7 Support</h3>
-
-                        <p>
-                            Lorem ipsum donor amet siti ceali
-                            ut enim ad minim veniam.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- CUSTOMIZABLE -->
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-
-                        <img
-                            src="./assets/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
-                            alt="Customizable"
-                        >
-
-                    </div>
-
-                    <div>
-
-                        <h3>Customizable</h3>
-
-                        <p>
-                            Lorem ipsum donor amet siti ceali
-                            ut enim ad minim veniam.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- RELIABLE -->
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-
-                        <img
-                            src="./assets/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
-                            alt="Reliable"
-                        >
-
-                    </div>
-
-                    <div>
-
-                        <h3>Reliable</h3>
-
-                        <p>
-                            Lorem ipsum donor amet siti ceali
-                            ut enim ad minim veniam.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- FAST -->
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-
-                        <img
-                            src="./assets/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
-                            alt="Fast"
-                        >
-
-                    </div>
-
-                    <div>
-
-                        <h3>Fast</h3>
-
-                        <p>
-                            Lorem ipsum donor amet siti ceali
-                            ut enim ad minim veniam.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- EASY -->
-
-                <div class="feature-card">
-
-                    <div class="feature-icon">
-
-                        <img
-                            src="./assets/simple-icon.673b7e1750b2a4ef32907fc164828d00.svg"
-                            alt="Easy"
-                        >
-
-                    </div>
-
-                    <div>
-
-                        <h3>Easy</h3>
-
-                        <p>
-                            Lorem ipsum donor amet siti ceali
-                            ut enim ad minim veniam.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             QUALITY WORK
-        ========================== -->
-
-        <section class="section split container">
-
-            <div class="split-content">
-
-                <span class="eyebrow">
-                    QUALITY WORK
-                </span>
-
-                <h2>
-                    Designed & Developed
-                    by <span>Professionals.</span>
-                </h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt.
-                </p>
-
-                <a href="#" class="primary-btn">
-                    Learn More
-                </a>
-
-            </div>
-
-
-            <div class="split-image screenshot">
-
-                <img
-                    src="./assets/hero-screenshot-1.40a097b525c2f8c9808e.png"
-                    alt="Website Preview"
-                >
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             STEPS
-        ========================== -->
-
-        <section class="section split container reverse-mobile">
-
-            <div class="split-image">
-
-                <img
-                    src="./assets/hero-screenshot-2.241aac1fbc66db29d873.png"
-                    alt="Getting Started"
-                >
-
-            </div>
-
-
-            <div class="split-content">
-
-                <span class="eyebrow">
-                    STEPS
-                </span>
-
-                <h2>
-                    Easy to
-                    <span>Get Started.</span>
-                </h2>
-
-                <div class="steps">
-
-
-                    <div class="step">
-
-                        <strong>01</strong>
-
-                        <div>
-
-                            <h3>Register</h3>
-
-                            <p>
-                                Create an account with us using
-                                Google or Facebook.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="step">
-
-                        <strong>02</strong>
-
-                        <div>
-
-                            <h3>Download</h3>
-
-                            <p>
-                                Browse and download the template
-                                that you like from the marketplace.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="step">
-
-                        <strong>03</strong>
-
-                        <div>
-
-                            <h3>Run</h3>
-
-                            <p>
-                                Follow the instructions to setup
-                                and customize the template to your needs.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             VALUES
-        ========================== -->
-
-        <section class="section split container">
-
-            <div class="split-content">
-
-                <span class="eyebrow">
-                    VALUES
-                </span>
-
-                <h2>
-                    We Always Abide by Our
-                    <span>Principles.</span>
-                </h2>
-
-                <p>
-                    Affordable solutions created with professionalism
-                    by experienced designers.
-                </p>
-
-
-                <div class="values">
-
-                    <div class="value">
-
-                        <div class="value-icon green">
-                            $
-                        </div>
-
-                        <h3>Affordable</h3>
-
-                        <p>
-                            We promise to offer you the best rate
-                            we can at par with the industry standard.
-                        </p>
-
-                    </div>
-
-
-                    <div class="value">
-
-                        <div class="value-icon red">
-                            ♡
-                        </div>
-
-                        <h3>Professionalism</h3>
-
-                        <p>
-                            We assure you that our templates
-                            are designed and created by professional designers.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <a href="#" class="primary-btn">
-                    Learn More
-                </a>
-
-            </div>
-
-
-            <div class="split-image">
-
-                <img
-                    src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
-                    alt="Prototype Illustration"
-                >
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             PRICING
-        ========================== -->
-
-        <section
-            id="pricing"
-            class="pricing-section section container"
-        >
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    PRICING
-                </span>
-
-                <h2>
-                    Reasonable & Flexible
-                    <span>Plans.</span>
-                </h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                </p>
-
-            </div>
-
-
-            <div class="pricing-grid">
-
-
-                <!-- PERSONAL -->
-
-                <div class="price-card personal">
-
-                    <h3>PERSONAL</h3>
-
-                    <div class="price">
-                        $17.99
-                    </div>
-
-                    <span class="monthly">
-                        MONTHLY
-                    </span>
-
-                    <hr>
-
-                    <h4>For Individuals</h4>
-
-                    <p>30 Templates</p>
-
-                    <p>7 Landing Pages</p>
-
-                    <p>12 Internal Pages</p>
-
-                    <p>Basic Assistance</p>
-
-                    <hr>
-
-                    <a href="#" class="buy-btn">
-                        BUY NOW
-                    </a>
-
-                </div>
-
-
-
-                <!-- BUSINESS -->
-
-                <div class="price-card business">
-
-                    <h3>BUSINESS</h3>
-
-                    <div class="price">
-                        $37.99
-                    </div>
-
-                    <span class="monthly">
-                        MONTHLY
-                    </span>
-
-                    <hr>
-
-                    <h4>For Small Businesses</h4>
-
-                    <p>60 Templates</p>
-
-                    <p>15 Landing Pages</p>
-
-                    <p>22 Internal Pages</p>
-
-                    <p>Priority Assistance</p>
-
-                    <hr>
-
-                    <a href="#" class="buy-btn business-btn">
-                        BUY NOW
-                    </a>
-
-                </div>
-
-
-
-                <!-- ENTERPRISE -->
-
-                <div class="price-card enterprise">
-
-                    <h3>ENTERPRISE</h3>
-
-                    <div class="price">
-                        $57.99
-                    </div>
-
-                    <span class="monthly">
-                        MONTHLY
-                    </span>
-
-                    <hr>
-
-                    <h4>For Large Companies</h4>
-
-                    <p>90 Templates</p>
-
-                    <p>27 Landing Pages</p>
-
-                    <p>37 Internal Pages</p>
-
-                    <p>Personal Assistance</p>
-
-                    <hr>
-
-                    <a href="#" class="buy-btn">
-                        BUY NOW
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             TESTIMONIALS
-        ========================== -->
-
-        <section class="section split container">
-
-            <div class="split-image">
-
-                <img
-                    src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg"
-                    alt="Happy Clients"
-                >
-
-            </div>
-
-
-            <div class="split-content">
-
-                <span class="eyebrow">
-                    TESTIMONIALS
-                </span>
-
-                <h2>
-                    Our Clients
-                    <span>Love Us.</span>
-                </h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet,
-                    consectetur adipiscing elit.
-                </p>
-
-
-                <div class="stars">
-                    ★★★★★
-                </div>
-
-                <h3 class="testimonial-title">
-                    Amazing User Experience
-                </h3>
-
-                <p>
-                    Duis aute irure dolor in reprehenderit
-                    in voluptate velit esse cillum dolore
-                    eu fugiat nulla pariatur.
-                </p>
-
-
-                <div class="person">
-
-                    <img
-                        src="./assets/photo-1494790108377-be9c29b29330.avif"
-                        alt="Charlotte Hale"
-                    >
-
-                    <div>
-
-                        <h4>
-                            Charlotte Hale
-                        </h4>
-
-                        <span>
-                            Director, Delos Inc.
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             CALL TO ACTION
-        ========================== -->
-
-        <section
-            id="contact"
-            class="cta container"
-        >
-
-            <h2>
-                Developers all over the world are
-                happily using Treact.
-            </h2>
-
-
-            <div class="cta-buttons">
-
-                <a href="#" class="cta-start">
-                    Get Started
-                </a>
-
-                <a href="#" class="cta-contact">
-                    Contact Us
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="footer-links container">
-
-
-            <div>
-
-                <h4>MAIN</h4>
-
-                <a href="#">Blog</a>
-
-                <a href="#">FAQs</a>
-
-                <a href="#">Support</a>
-
-                <a href="#">About Us</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>PRODUCT</h4>
-
-                <a href="#">Log In</a>
-
-                <a href="#">Personal</a>
-
-                <a href="#">Business</a>
-
-                <a href="#">Team</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>PRESS</h4>
-
-                <a href="#">Logos</a>
-
-                <a href="#">Events</a>
-
-                <a href="#">Stories</a>
-
-                <a href="#">Office</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>TEAM</h4>
-
-                <a href="#">Career</a>
-
-                <a href="#">Founders</a>
-
-                <a href="#">Culture</a>
-
-                <a href="#">Onboarding</a>
-
-            </div>
-
-
-            <div>
-
-                <h4>LEGAL</h4>
-
-                <a href="#">GDPR</a>
-
-                <a href="#">Privacy Policy</a>
-
-                <a href="#">Terms of Service</a>
-
-                <a href="#">Disclaimer</a>
-
-            </div>
-
+          <h2 id="resultsTitle">
+            Popular Movies
+          </h2>
         </div>
 
 
-        <div class="footer-bottom container">
+        <!-- FILTER -->
+        <div class="filter-container">
 
-            <a href="#" class="footer-logo">
+          <label for="sortSelect">
+            Sort by
+          </label>
 
-                <img
-                    src="./assets/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
-                    alt="TReact"
-                >
+          <select id="sortSelect">
 
-                <strong>
-                    Treact Inc.
-                </strong>
+            <option value="default">
+              Featured
+            </option>
 
-            </a>
+            <option value="az">
+              Alphabetical A–Z
+            </option>
+
+            <option value="za">
+              Alphabetical Z–A
+            </option>
+
+            <option value="newest">
+              Newest to Oldest
+            </option>
+
+            <option value="oldest">
+              Oldest to Newest
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
 
 
+      <!-- STATUS / ERROR -->
+      <p id="message" class="message"></p>
+
+
+      <!-- LOADING -->
+      <div id="loader" class="loader-container">
+
+        <div class="loader"></div>
+
+        <p>Finding movies...</p>
+
+      </div>
+
+
+      <!-- MOVIES -->
+      <div
+        id="movieGrid"
+        class="movie-grid"
+      ></div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+
+      <div class="about-content">
+
+        <p class="section-label">
+          ABOUT MOVIEVAULT
+        </p>
+
+        <h2>
+          Movies. Stories. Memories.
+        </h2>
+
+        <p>
+          MovieVault makes discovering movies simple.
+          Search for your favorite films and explore
+          information powered by the OMDb API.
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <span>🎬</span>
+            <h3>Thousands of Movies</h3>
             <p>
-                © 2018 Treact Inc.
-                All Rights Reserved.
+              Search a huge collection of movies from
+              different decades.
             </p>
+          </div>
 
+          <div class="feature">
+            <span>⚡</span>
+            <h3>Fast Search</h3>
+            <p>
+              Movie information is fetched dynamically
+              using an external API.
+            </p>
+          </div>
 
-            <div class="socials">
-
-                <a href="#">f</a>
-
-                <a href="#">t</a>
-
-                <a href="#">▶</a>
-
-            </div>
+          <div class="feature">
+            <span>📱</span>
+            <h3>Fully Responsive</h3>
+            <p>
+              Designed to work beautifully on desktop,
+              tablet and mobile.
+            </p>
+          </div>
 
         </div>
 
-    </footer>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <a href="#" class="logo footer-logo">
+      🎬 MOVIE<span>VAULT</span>
+    </a>
+
+    <p>
+      Discover your next favorite movie.
+    </p>
+
+    <p class="api-credit">
+      Movie information provided by OMDb API.
+    </p>
+
+    <p class="copyright">
+      © 2026 MovieVault
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
 
 </body>
-
 </html>
